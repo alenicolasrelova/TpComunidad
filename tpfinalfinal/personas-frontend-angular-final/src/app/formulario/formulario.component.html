@@ -1,0 +1,8 @@
+<div class="box">
+  <form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarPersona()"> <!--ngSubmit cuando se agrege el formulario
+  lo que va a hacer es preguntar si la forma es valida-->
+    <input type="text" name="nombre" placeholder="Nombre" [(ngModel)]="nombreInput" required/>
+    <button type="submit" style="cursor: pointer">+</button>
+    <button *ngIf="idPersona != null" type="submit" style="cursor: pointer" class="buttonRed" (click)="onEliminarPersona()">-</button>
+  </form>
+</div>
